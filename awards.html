@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Team 1912 Combustion - Awards and Achievements">
+    <meta name="theme-color" content="#2498DC">
+    <link rel="shortcut icon" href="assets/frc1912.ico">
+    <title>Awards - Team 1912 Combustion</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <script src="https://unpkg.com/scrollreveal@4.1.0/dist/scrollreveal.min.js" defer></script>
+    <script src="js/main.js" defer></script>
+    <style>
+        .awards-table-container {
+            max-width: 1100px;
+            margin: 3rem auto;
+            padding: 0 1rem;
+        }
+        .awards-table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0;
+            background: linear-gradient(135deg, rgba(36,152,220,0.10) 0%, rgba(11,12,16,0.98) 100%);
+            border-radius: 18px;
+            overflow: hidden;
+            box-shadow: 0 6px 32px rgba(36,152,220,0.12), 0 1.5px 6px rgba(0,0,0,0.18);
+        }
+        .awards-table th, .awards-table td {
+            padding: 1.1rem 0.7rem;
+            text-align: left;
+            font-size: 1.08rem;
+            border-bottom: 1px solid rgba(36,152,220,0.10);
+            transition: background 0.2s, color 0.2s;
+        }
+        .awards-table th {
+            background: linear-gradient(90deg, var(--primary-blue) 60%, var(--secondary-blue) 100%);
+            color: var(--white);
+            font-weight: 800;
+            letter-spacing: 0.5px;
+            text-align: left;
+            border-bottom: 2px solid var(--primary-orange);
+        }
+        .awards-table td {
+            color: var(--white);
+            background: transparent;
+        }
+        .awards-table tr:nth-child(even) td {
+            background: rgba(36,152,220,0.07);
+        }
+        .awards-table tr:hover td {
+            background: rgba(36,152,220,0.18);
+            color: var(--accent-yellow);
+        }
+        .award-major {
+            color: var(--primary-orange);
+            font-weight: bold;
+            text-shadow: 0 1px 6px rgba(255,131,0,0.10);
+        }
+        .award-special {
+            color: var(--accent-yellow);
+            font-weight: bold;
+            text-shadow: 0 1px 6px rgba(254,244,0,0.10);
+        }
+        .awards-table th, .awards-table td {
+            width: 33.33%;
+        }
+        @media (max-width: 700px) {
+            .awards-table th, .awards-table td {
+                font-size: 0.95rem;
+                padding: 0.6rem 0.3rem;
+            }
+        }
+        @media (max-width: 500px) {
+            .awards-table th, .awards-table td {
+                font-size: 0.85rem;
+                padding: 0.4rem 0.2rem;
+            }
+        }
+        .awards-table td:first-child a {
+            color: var(--accent-yellow);
+            font-weight: bold;
+            text-decoration: underline;
+            transition: color 0.2s;
+            cursor: pointer;
+        }
+        .awards-table td:first-child a:hover,
+        .awards-table td:first-child a:focus {
+            color: var(--primary-orange);
+            text-decoration: underline;
+            outline: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <div class="logo-container">
+                <img src="assets/static/1912Horizontal.png" alt="Team 1912 Logo" class="main-logo">
+            </div>
+            <nav class="main-nav">
+                <ul class="nav-list">
+                    <li><a href="index.html">HOME</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle">ABOUT</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="about.html">Team Story</a></li>
+                            <li><a href="sponsors.html">Sponsors</a></li>
+                            <li><a href="awards.html" class="active">Awards</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle">PROGRAMS</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="robots.html">Robots</a></li>
+                            <li><a href="outreach.html">Outreach</a></li>
+                            <li><a href="programs.html">Student Programs</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="store.html">STORE</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle">EVENTS <span class="new-indicator">!</span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="events.html">Events <span class="new-indicator">!</span></a></li>
+                            <li><a href="newsletter.html">Newsletter</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+            <button id="mobile-menu-toggle" class="mobile-menu-toggle" aria-label="Toggle navigation menu">
+                <span class="hamburger-bar"></span>
+                <span class="hamburger-bar"></span>
+                <span class="hamburger-bar"></span>
+            </button>
+        </div>
+    </header>
+    <div class="social-icons">
+        <a href="https://www.facebook.com/FRC1912" target="_blank" title="Facebook">
+            <img src="assets/websites/facebook.png" alt="Facebook">
+        </a>
+        <a href="https://www.instagram.com/frc1912" target="_blank" title="Instagram">
+            <img src="assets/websites/instagram.png" alt="Instagram">
+        </a>
+        <a href="https://www.youtube.com/team1912combustion" target="_blank" title="YouTube">
+            <img src="assets/websites/Youtube.png" alt="YouTube">
+        </a>
+        <a href="https://github.com/team1912combustion" target="_blank" title="GitHub">
+            <img src="assets/websites/github-logo.png" alt="GitHub">
+        </a>
+        <a href="https://www.thebluealliance.com/team/1912" target="_blank" title="The Blue Alliance">
+            <img src="assets/websites/thebluealliance.png" alt="The Blue Alliance">
+        </a>
+        <a href="https://www.tiktok.com/@team1912combustion" target="_blank" title="TikTok">
+            <img src="assets/websites/tiklogo.webp" alt="TikTok">
+        </a>
+    </div>
+    <main class="page-content">
+        <div class="page-header">
+            <h1>Awards & Achievements</h1>
+            <p class="page-description">A showcase of Team 1912 Combustion's awards and honors throughout the years.</p>
+        </div>
+        <section class="awards-section">
+            <div class="awards-table-container">
+                <table class="awards-table">
+                    <thead>
+                        <tr>
+                            <th>Year</th>
+                            <th>Event</th>
+                            <th>Award</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td><a href="https://www.thebluealliance.com/team/1912/2026" target="_blank" rel="noopener" aria-label="View 2026 on The Blue Alliance">2026</a></td><td>Rocket City Regional</td><td>Gracious Professionalism Award</td></tr>
+                        <tr><td><a href="https://www.thebluealliance.com/team/1912/2026" target="_blank" rel="noopener" aria-label="View 2026 on The Blue Alliance">2026</a></td><td>Magnolia Regional</td><td>Judges' Award</td></tr>
+                        <tr><td><a href="https://www.thebluealliance.com/team/1912/2025" target="_blank" rel="noopener" aria-label="View 2025 on The Blue Alliance">2025</a></td><td>Magnolia Regional</td><td>Gracious Professionalism Award</td></tr>
+                        <tr><td><a href="https://www.thebluealliance.com/team/1912/2024" target="_blank" rel="noopener" aria-label="View 2024 on The Blue Alliance">2024</a></td><td>Bayou Regional</td><td class="award-major">Regional Winners</td></tr>
+                        <tr><td><a href="https://www.thebluealliance.com/team/1912/2024" target="_blank" rel="noopener" aria-label="View 2024 on The Blue Alliance">2024</a></td><td>Magnolia Regional</td><td class="award-major">Regional Winners</td></tr>
+                        <tr><td><a href="https://www.thebluealliance.com/team/1912/2024" target="_blank" rel="noopener" aria-label="View 2024 on The Blue Alliance">2024</a></td><td>Magnolia Regional</td><td>Team Sustainability Award sponsored by Dow</td></tr>
+                        <tr><td><a href="https://www.thebluealliance.com/team/1912/2023" target="_blank" rel="noopener" aria-label="View 2023 on The Blue Alliance">2023</a></td><td>Bayou Regional</td><td>Imagery Award in honor of Jack Kamen</td></tr>
+                        <tr><td><a href="https://www.thebluealliance.com/team/1912/2023" target="_blank" rel="noopener" aria-label="View 2023 on The Blue Alliance">2023</a></td><td>Magnolia Regional</td><td>Gracious Professionalism Award</td></tr>
+                        <tr><td><a href="https://www.thebluealliance.com/team/1912/2023" target="_blank" rel="noopener" aria-label="View 2023 on The Blue Alliance">2023</a></td><td>Magnolia Regional</td><td>Regional Finalists</td></tr>
+                        <tr><td><a href="https://www.thebluealliance.com/team/1912/2023" target="_blank" rel="noopener" aria-label="View 2023 on The Blue Alliance">2023</a></td><td>Magnolia Regional</td><td class="award-special">FIRST Dean's List Finalist Award (Trent Macaluso & Jaelyn Graham)</td></tr>
+                        <tr><td><a href="https://www.thebluealliance.com/team/1912/2022" target="_blank" rel="noopener" aria-label="View 2022 on The Blue Alliance">2022</a></td><td>Tallahassee Regional</td><td class="award-special">FIRST Dean's List Finalist Award (Christina Jackson)</td></tr>
+                        <tr><td><a href="https://www.thebluealliance.com/team/1912/2022" target="_blank" rel="noopener" aria-label="View 2022 on The Blue Alliance">2022</a></td><td>Tallahassee Regional</td><td class="award-special">FIRST Dean's List Finalist Award (Reilly Fastring)</td></tr>
+                        <tr><td><a href="https://www.thebluealliance.com/team/1912/2020" target="_blank" rel="noopener" aria-label="View 2020 on The Blue Alliance">2020</a></td><td>* Bayou Regional (Cancelled)</td><td class="award-special">FIRST Dean's List Finalist Award (Joshua Hou)</td></tr>
+                        <tr><td><a href="https://www.thebluealliance.com/team/1912/2018" target="_blank" rel="noopener" aria-label="View 2018 on The Blue Alliance">2018</a></td><td>Bayou Regional</td><td class="award-special">FIRST Dean's List Finalist Award (Austin Thombs)</td></tr>
+                        <tr><td><a href="https://www.thebluealliance.com/team/1912/2017" target="_blank" rel="noopener" aria-label="View 2017 on The Blue Alliance">2017</a></td><td>Bayou Regional</td><td class="award-major">Regional Chairman's Award</td></tr>
+                        <tr><td><a href="https://www.thebluealliance.com/team/1912/2016" target="_blank" rel="noopener" aria-label="View 2016 on The Blue Alliance">2016</a></td><td>Bayou Regional</td><td>Team Spirit Award sponsored by FCA Foundation</td></tr>
+                        <tr><td><a href="https://www.thebluealliance.com/team/1912/2016" target="_blank" rel="noopener" aria-label="View 2016 on The Blue Alliance">2016</a></td><td>Bayou Regional</td><td class="award-special">FIRST Dean's List Finalist Award (Jade Grimes)</td></tr>
+                        <tr><td><a href="https://www.thebluealliance.com/team/1912/2015" target="_blank" rel="noopener" aria-label="View 2015 on The Blue Alliance">2015</a></td><td>Einstein Field</td><td class="award-special">FIRST Dean's List Award (Ben Rowley)</td></tr>
+                        <tr><td><a href="https://www.thebluealliance.com/team/1912/2015" target="_blank" rel="noopener" aria-label="View 2015 on The Blue Alliance">2015</a></td><td>Bayou Regional</td><td class="award-special">FIRST Dean's List Finalist Award (Ben Rowley)</td></tr>
+                        <tr><td><a href="https://www.thebluealliance.com/team/1912/2014" target="_blank" rel="noopener" aria-label="View 2014 on The Blue Alliance">2014</a></td><td>Einstein Field</td><td class="award-special">FIRST Dean's List Award (Alexander Lew)</td></tr>
+                        <tr><td><a href="https://www.thebluealliance.com/team/1912/2014" target="_blank" rel="noopener" aria-label="View 2014 on The Blue Alliance">2014</a></td><td>Bayou Regional</td><td class="award-special">FIRST Dean's List Finalist (Alexander Lew)</td></tr>
+                        <tr><td><a href="https://www.thebluealliance.com/team/1912/2013" target="_blank" rel="noopener" aria-label="View 2013 on The Blue Alliance">2013</a></td><td>Razorback Regional</td><td>Quality Award sponsored by Motorola</td></tr>
+                        <tr><td><a href="https://www.thebluealliance.com/team/1912/2013" target="_blank" rel="noopener" aria-label="View 2013 on The Blue Alliance">2013</a></td><td>Bayou Regional</td><td class="award-major">Regional Chairman's Award</td></tr>
+                        <tr><td><a href="https://www.thebluealliance.com/team/1912/2013" target="_blank" rel="noopener" aria-label="View 2013 on The Blue Alliance">2013</a></td><td>Bayou Regional</td><td>Woodie Flowers Finalist Award (Wendy Holladay)</td></tr>
+                        <tr><td><a href="https://www.thebluealliance.com/team/1912/2013" target="_blank" rel="noopener" aria-label="View 2013 on The Blue Alliance">2013</a></td><td>Bayou Regional</td><td class="award-special">FIRST Dean's List Finalist (Scott Kent)</td></tr>
+                        <tr><td><a href="https://www.thebluealliance.com/team/1912/2012" target="_blank" rel="noopener" aria-label="View 2012 on The Blue Alliance">2012</a></td><td>Einstein Field</td><td class="award-special">FIRST Dean's List Award (Rachel Holladay)</td></tr>
+                        <tr><td><a href="https://www.thebluealliance.com/team/1912/2012" target="_blank" rel="noopener" aria-label="View 2012 on The Blue Alliance">2012</a></td><td>Bayou Regional</td><td class="award-major">Regional Chairman's Award</td></tr>
+                        <tr><td><a href="https://www.thebluealliance.com/team/1912/2012" target="_blank" rel="noopener" aria-label="View 2012 on The Blue Alliance">2012</a></td><td>Bayou Regional</td><td>Website Award</td></tr>
+                        <tr><td><a href="https://www.thebluealliance.com/team/1912/2012" target="_blank" rel="noopener" aria-label="View 2012 on The Blue Alliance">2012</a></td><td>Bayou Regional</td><td class="award-special">FIRST Dean's List Finalist Award (Rachel Holladay)</td></tr>
+                        <tr><td><a href="https://www.thebluealliance.com/team/1912/2011" target="_blank" rel="noopener" aria-label="View 2011 on The Blue Alliance">2011</a></td><td>Bayou Regional</td><td class="award-major">Regional Chairman's Award</td></tr>
+                        <tr><td><a href="https://www.thebluealliance.com/team/1912/2011" target="_blank" rel="noopener" aria-label="View 2011 on The Blue Alliance">2011</a></td><td>Bayou Regional</td><td>Gracious Professionalism Award sponsored by Johnson & Johnson</td></tr>
+                        <tr><td><a href="https://www.thebluealliance.com/team/1912/2011" target="_blank" rel="noopener" aria-label="View 2011 on The Blue Alliance">2011</a></td><td>Bayou Regional</td><td>Website Award</td></tr>
+                        <tr><td><a href="https://www.thebluealliance.com/team/1912/2011" target="_blank" rel="noopener" aria-label="View 2011 on The Blue Alliance">2011</a></td><td>Bayou Regional</td><td class="award-special">FIRST Dean's List Finalist Award (Hannah Sorrell)</td></tr>
+                        <tr><td><a href="https://www.thebluealliance.com/team/1912/2010" target="_blank" rel="noopener" aria-label="View 2010 on The Blue Alliance">2010</a></td><td>Bayou Regional</td><td class="award-major">Regional Chairman's Award</td></tr>
+                        <tr><td><a href="https://www.thebluealliance.com/team/1912/2010" target="_blank" rel="noopener" aria-label="View 2010 on The Blue Alliance">2010</a></td><td>Bayou Regional</td><td>Coopertition Award</td></tr>
+                        <tr><td><a href="https://www.thebluealliance.com/team/1912/2010" target="_blank" rel="noopener" aria-label="View 2010 on The Blue Alliance">2010</a></td><td>Bayou Regional</td><td>Engineering Excellence Award sponsored by Delphi</td></tr>
+                        <tr><td><a href="https://www.thebluealliance.com/team/1912/2010" target="_blank" rel="noopener" aria-label="View 2010 on The Blue Alliance">2010</a></td><td>Bayou Regional</td><td>Excellence in Design Award sponsored by Autodesk</td></tr>
+                        <tr><td><a href="https://www.thebluealliance.com/team/1912/2010" target="_blank" rel="noopener" aria-label="View 2010 on The Blue Alliance">2010</a></td><td>Bayou Regional</td><td class="award-special">FIRST Dean's List Finalist (Andy Zhou, Christopher Collins)</td></tr>
+                        <tr><td><a href="https://www.thebluealliance.com/team/1912/2010" target="_blank" rel="noopener" aria-label="View 2010 on The Blue Alliance">2010</a></td><td>Lone Star Regional</td><td>Quality Award sponsored by Motorola</td></tr>
+                        <tr><td><a href="https://www.thebluealliance.com/team/1912/2009" target="_blank" rel="noopener" aria-label="View 2009 on The Blue Alliance">2009</a></td><td>Bayou Regional</td><td>Johnson & Johnson Gracious Professionalism</td></tr>
+                        <tr><td><a href="https://www.thebluealliance.com/team/1912/2009" target="_blank" rel="noopener" aria-label="View 2009 on The Blue Alliance">2009</a></td><td>Bayou Regional</td><td>Woodie Flowers Award (Dr. Dale BiBee)</td></tr>
+                        <tr><td><a href="https://www.thebluealliance.com/team/1912/2008" target="_blank" rel="noopener" aria-label="View 2008 on The Blue Alliance">2008</a></td><td>Bayou Regional</td><td>Judges Award</td></tr>
+                        <tr><td><a href="https://www.thebluealliance.com/team/1912/2007" target="_blank" rel="noopener" aria-label="View 2007 on The Blue Alliance">2007</a></td><td>Bayou Regional</td><td class="award-major">Regional Winner</td></tr>
+                        <tr><td><a href="https://www.thebluealliance.com/team/1912/2007" target="_blank" rel="noopener" aria-label="View 2007 on The Blue Alliance">2007</a></td><td>Bayou Regional</td><td>Rockwell Automation Innovation in Control Award</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="footer-content">
+            <div class="footer-info">
+                <h3>Team 1912 Combustion</h3>
+                <p>&copy; 2025 Team 1912 Combustion. All rights reserved.</p>
+                <p>Contact us at 
+                    <a href="mailto:team1912combustion@gmail.com">team1912combustion@gmail.com</a>
+                </p>
+            </div>
+            <div class="quick-links">
+                <h4>Quick Links</h4>
+                <div class="quick-links-grid">
+                    <a href="sponsors.html">Sponsors</a>
+                    <a href="awards.html">Awards</a>
+                    <a href="newsletter.html">Newsletter</a>
+                    <a href="calendar.html">Calendar</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html> 
