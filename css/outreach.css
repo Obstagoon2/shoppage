@@ -1,0 +1,1358 @@
+/* Outreach Section Styles */
+.outreach-section {
+  max-width: 1800px;
+  margin: var(--header-height) auto 0;
+  padding: 4rem 2rem;
+  text-align: center;
+  background: linear-gradient(
+    to bottom,
+    rgba(11, 12, 16, 0.95),
+    rgba(31, 31, 31, 0.98)
+  );
+  color: white;
+  position: relative;
+  overflow: visible;
+  min-height: calc(100vh - var(--header-height));
+}
+
+/* Ambient gradient background */
+.outreach-section::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(
+      circle at 30% 30%,
+      rgba(36, 152, 220, 0.03) 0%,
+      transparent 80%
+    ),
+    radial-gradient(circle at 70% 70%, rgba(255, 131, 0, 0.03) 0%, transparent 80%);
+  pointer-events: none;
+  z-index: 0;
+  animation: gradientMove 20s ease-in-out infinite alternate;
+}
+
+/* Add ambient gradient background */
+.outreach-section::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+        radial-gradient(circle at 30% 30%, rgba(36, 152, 220, 0.03) 0%, transparent 80%),
+        radial-gradient(circle at 70% 70%, rgba(255, 131, 0, 0.03) 0%, transparent 80%);
+    pointer-events: none;
+    z-index: 0;
+    animation: gradientMove 20s ease-in-out infinite alternate;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    position: relative;
+    padding-bottom: 1rem;
+    font-family: 'Nasalization', sans-serif;
+    background: linear-gradient(90deg, #2498DC, #FF8300);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+    text-shadow: 0 0 20px rgba(36, 152, 220, 0.3);
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 150px;
+    height: 3px;
+    background: linear-gradient(90deg, #2498DC, #FF8300);
+    box-shadow: 0 0 10px rgba(36, 152, 220, 0.5);
+}
+
+.section-description {
+    text-align: center;
+    color: rgba(255, 255, 255, 0.9);
+    max-width: 800px;
+    margin: 0 auto 3rem auto;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    position: relative;
+    z-index: 1;
+}
+/* Outreach Grid */
+.outreach-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  position: relative;
+  z-index: 1;
+  padding: 2rem 0;
+}
+
+/* Outreach Cards */
+.outreach-card {
+  background: linear-gradient(
+    135deg,
+    rgba(36, 152, 220, 0.05) 0%,
+    rgba(26, 26, 26, 0.9) 50%,
+    rgba(255, 131, 0, 0.05) 100%
+  );
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 0 15px rgba(255, 131, 0, 0.1), 0 0 15px rgba(36, 152, 220, 0.1);
+  transition: all 0.3s ease;
+  border: 1px solid;
+  border-image: linear-gradient(
+      135deg,
+      rgba(36, 152, 220, 0.3),
+      rgba(255, 131, 0, 0.3)
+    )
+    1;
+  backdrop-filter: blur(5px);
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.outreach-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 25px rgba(255, 131, 0, 0.2), 0 0 25px rgba(36, 152, 220, 0.2);
+}
+
+.outreach-image {
+  width: 100%;
+  height: 250px;
+  overflow: hidden;
+}
+
+.outreach-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.outreach-card:hover .outreach-image img {
+  transform: scale(1.05);
+}
+
+.outreach-content {
+  padding: 1.5rem;
+  text-align: left;
+}
+
+.outreach-content h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #2498dc;
+  font-family: "Nasalization", sans-serif;
+}
+
+.outreach-content p {
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.6;
+  font-size: 1rem;
+}
+
+/* Responsive Outreach Grid */
+@media (max-width: 1200px) {
+  .outreach-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .outreach-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .section-title,
+  .page-header h1 {
+    font-size: 2.5rem;
+  }
+
+  .outreach-content h2 {
+    font-size: 1.3rem;
+  }
+}
+
+/* Calendar Section Styles */
+.calendar-section {
+  margin-top: 0;
+  padding: 2rem 0;
+  position: relative;
+  z-index: 1;
+}
+
+.calendar-title {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  font-family: "Nasalization", sans-serif;
+  background: linear-gradient(90deg, #2498dc, #ff8300);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+  text-shadow: 0 0 20px rgba(36, 152, 220, 0.3);
+  position: relative;
+  padding-bottom: 1rem;
+  text-align: center;
+}
+
+.calendar-title::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 120px;
+  height: 3px;
+  background: linear-gradient(90deg, #2498dc, #ff8300);
+  box-shadow: 0 0 10px rgba(36, 152, 220, 0.5);
+}
+
+.calendar-description {
+  color: rgba(255, 255, 255, 0.9);
+  max-width: 600px;
+  margin: 0 auto 2rem auto;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  text-align: center;
+}
+
+/* Dynamic Events Grid */
+#calendar-events {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  padding: 1rem 0;
+}
+
+/* Dynamic Event Cards */
+.event-card {
+  background: linear-gradient(
+    135deg,
+    rgba(36, 152, 220, 0.05) 0%,
+    rgba(26, 26, 26, 0.9) 50%,
+    rgba(255, 131, 0, 0.05) 100%
+  );
+  border-radius: 15px;
+  box-shadow: 0 0 15px rgba(36, 152, 220, 0.2);
+  padding: 1.5rem;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.event-card h3 {
+  margin-top: 0;
+  color: #2498dc;
+  font-family: "Nasalization", sans-serif;
+  margin-bottom: 0.5rem;
+}
+
+.event-card p {
+  font-size: 0.9rem;
+  line-height: 1.4;
+  margin-bottom: 1rem;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+/* Add to Calendar Button */
+.add-calendar-btn {
+  align-self: center;
+  background: #2498dc;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.add-calendar-btn:hover {
+  background: #1b7ec6;
+}
+
+
+/* Responsive Calendar Events Grid */
+@media (max-width: 900px) {
+  #calendar-events {
+    grid-template-columns: 1fr;
+  }
+}
+
+.calendar-sync {
+  display: flex;
+  justify-content: center;
+  margin-top: 3rem;
+  margin-bottom: 2rem;
+}
+
+.calendar-sync-button {
+  background-color: #2498dc;
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+.calendar-sync-button:hover {
+  background-color: #1c7db6;
+  transform: scale(1.05);
+}
+
+.calendar-load-controls {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+#load-more-btn {
+  display: block;
+  margin: 2rem auto 0;
+  max-width: fit-content;
+}
+
+/* Countdown Hero Section */
+.countdown-hero {
+  position: relative;
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  margin-top: var(--header-height);
+  padding: 4rem 2rem;
+}
+
+.countdown-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -2;
+}
+
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    135deg,
+    rgba(11, 12, 16, 0.8) 0%,
+    rgba(36, 152, 220, 0.3) 50%,
+    rgba(11, 12, 16, 0.8) 100%
+  );
+  z-index: -1;
+}
+
+.countdown-content {
+  text-align: center;
+  color: white;
+  z-index: 1;
+  max-width: 800px;
+  padding: 2rem;
+}
+
+.countdown-title {
+  font-size: 2.5rem;
+  font-family: 'Nasalization', sans-serif;
+  margin-bottom: 2rem;
+  background: linear-gradient(90deg, #2498DC, #FF8300);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+  text-shadow: 0 0 20px rgba(36, 152, 220, 0.3);
+}
+
+.countdown-timer {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.time-unit {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.08);
+  padding: 1rem 1.5rem;
+  border-radius: 10px;
+  backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  min-width: 80px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+}
+
+.time-value {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #2498DC;
+  font-family: 'Nasalization', sans-serif;
+  text-shadow: 0 0 10px rgba(36, 152, 220, 0.3);
+  line-height: 1;
+  margin-bottom: 0.3rem;
+}
+
+.time-label {
+  font-size: 0.8rem;
+  color: #FF8300;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-weight: 600;
+}
+
+.event-details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.event-date {
+  font-size: 1.2rem;
+  color: white;
+  font-weight: 600;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.event-location {
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.8);
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.learn-more-btn {
+  background: linear-gradient(135deg, #2498DC, #FF8300);
+  color: white;
+  padding: 1rem 2.5rem;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 25px rgba(36, 152, 220, 0.3);
+  border: 2px solid transparent;
+}
+
+.learn-more-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 35px rgba(36, 152, 220, 0.4);
+  background: linear-gradient(135deg, #1b7ec6, #e6750a);
+}
+
+/* Career Quest Details Section */
+.career-quest-details {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  background: linear-gradient(
+    to bottom,
+    rgba(11, 12, 16, 0.95),
+    rgba(31, 31, 31, 0.98)
+  );
+}
+
+/* Career Quest Flyer Styling */
+.career-quest-flyer {
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f0f23 100%);
+  border-radius: 20px;
+  padding: 3rem;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(36, 152, 220, 0.2);
+  position: relative;
+  overflow: hidden;
+}
+
+.career-quest-flyer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(36, 152, 220, 0.05) 0%, rgba(255, 131, 0, 0.05) 100%);
+  pointer-events: none;
+}
+
+.flyer-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 2.5rem;
+  position: relative;
+  z-index: 1;
+}
+
+.flyer-title {
+  font-size: 3.5rem;
+  font-family: 'Nasalization', sans-serif;
+  color: #2498DC;
+  margin: 0;
+  text-shadow: 0 0 20px rgba(36, 152, 220, 0.3);
+  line-height: 1.1;
+}
+
+.flyer-datetime {
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.flyer-date {
+  font-size: 2rem;
+  color: #FF8300;
+  font-weight: bold;
+  font-family: 'Nasalization', sans-serif;
+}
+
+.flyer-time {
+  font-size: 1.2rem;
+  color: white;
+  font-weight: 500;
+}
+
+.flyer-content {
+  position: relative;
+  z-index: 1;
+}
+
+.flyer-intro {
+  margin-bottom: 3rem;
+}
+
+.flyer-intro h2 {
+  font-size: 2.2rem;
+  color: white;
+  margin-bottom: 1.5rem;
+  font-family: 'Nasalization', sans-serif;
+}
+
+.flyer-intro p {
+  font-size: 1.3rem;
+  color: rgba(255, 255, 255, 0.9);
+  line-height: 1.6;
+  max-width: 800px;
+}
+
+.flyer-sections {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  margin-bottom: 3rem;
+}
+
+.careers-section h3,
+.institutions-section h3 {
+  font-size: 1.8rem;
+  color: #2498DC;
+  margin-bottom: 1.5rem;
+  font-family: 'Nasalization', sans-serif;
+}
+
+.careers-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.careers-list li {
+  color: white;
+  font-size: 1.2rem;
+  padding: 0.8rem 0;
+  padding-left: 2rem;
+  position: relative;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.careers-list li::before {
+  content: '→';
+  position: absolute;
+  left: 0;
+  color: #FF8300;
+  font-weight: bold;
+  font-size: 1.4rem;
+}
+
+.institutions-logos {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.institution-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+}
+
+.institution-item:hover {
+  background: rgba(36, 152, 220, 0.1);
+  border-color: #2498DC;
+  transform: translateX(5px);
+}
+
+.institution-logo {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  background: white;
+  border-radius: 8px;
+  padding: 8px;
+}
+
+.institution-placeholder {
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, #2498DC, #FF8300);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: bold;
+  font-size: 1.2rem;
+  font-family: 'Nasalization', sans-serif;
+}
+
+.institution-item span {
+  color: white;
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+.institution-item a,
+.institution-item a.tba-link {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  color: inherit;
+  text-decoration: none;
+}
+
+.institution-item a:hover {
+  color: #2498DC;
+}
+
+.and-more {
+  color: #FF8300 !important;
+  font-style: italic;
+  font-size: 1.2rem !important;
+  font-weight: bold !important;
+}
+
+.flyer-details {
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 15px;
+  padding: 2rem;
+  border: 1px solid rgba(255, 131, 0, 0.3);
+}
+
+.flyer-details h3 {
+  color: #FF8300;
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  font-family: 'Nasalization', sans-serif;
+}
+
+.details-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+}
+
+.detail-item {
+  color: white;
+  font-size: 1.2rem;
+  line-height: 1.5;
+}
+
+.detail-item strong {
+  color: #2498DC;
+  font-weight: bold;
+}
+
+/* Responsive Design for Flyer */
+@media (max-width: 768px) {
+  .career-quest-flyer {
+    padding: 2rem;
+  }
+  
+  .flyer-header {
+    flex-direction: column;
+    gap: 1.5rem;
+    text-align: center;
+  }
+  
+  .flyer-title {
+    font-size: 2.5rem;
+  }
+  
+  .flyer-datetime {
+    text-align: center;
+  }
+  
+  .flyer-sections {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  .flyer-intro h2 {
+    font-size: 1.8rem;
+  }
+  
+  .flyer-intro p {
+    font-size: 1.1rem;
+  }
+  
+  .details-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Upcoming Events Section */
+.upcoming-events-section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 4rem 2rem;
+  background: linear-gradient(
+    to bottom,
+    rgba(11, 12, 16, 0.95),
+    rgba(31, 31, 31, 0.98)
+  );
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.section-header h2 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  font-family: 'Nasalization', sans-serif;
+  background: linear-gradient(90deg, #2498DC, #FF8300);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+  text-shadow: 0 0 20px rgba(36, 152, 220, 0.3);
+  position: relative;
+  padding-bottom: 1rem;
+}
+
+.section-header h2::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 150px;
+  height: 3px;
+  background: linear-gradient(90deg, #2498DC, #FF8300);
+  box-shadow: 0 0 10px rgba(36, 152, 220, 0.5);
+}
+
+.section-header p {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 1.1rem;
+  max-width: 800px;
+  margin: 0 auto 1rem auto;
+  line-height: 1.5;
+}
+
+.section-header p:last-child {
+  margin-bottom: 0;
+}
+
+.events-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.events-grid .event-card {
+  background: linear-gradient(
+    135deg,
+    rgba(36, 152, 220, 0.05) 0%,
+    rgba(26, 26, 26, 0.9) 50%,
+    rgba(255, 131, 0, 0.05) 100%
+  );
+  border-radius: 15px;
+  padding: 2rem;
+  border: 1px solid;
+  border-image: linear-gradient(
+    135deg,
+    rgba(36, 152, 220, 0.3),
+    rgba(255, 131, 0, 0.3)
+  ) 1;
+  backdrop-filter: blur(5px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.events-grid .event-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 40px rgba(36, 152, 220, 0.2);
+}
+
+.events-grid .event-header {
+  margin-bottom: 1.5rem;
+}
+
+.events-grid .event-header h3 {
+  color: #2498DC;
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  font-family: 'Nasalization', sans-serif;
+}
+
+.events-grid .event-date {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.events-grid .event-date .date {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #FF8300;
+  font-family: 'Nasalization', sans-serif;
+}
+
+.events-grid .event-date .time {
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.events-grid .event-description {
+  margin-bottom: 2rem;
+  flex-grow: 1;
+}
+
+.events-grid .event-description p {
+  color: rgba(255, 255, 255, 0.9);
+  line-height: 1.6;
+  font-size: 1rem;
+}
+
+/* Full Calendar Section */
+.full-calendar-section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 4rem 2rem;
+  background: linear-gradient(
+    to bottom,
+    rgba(11, 12, 16, 0.8),
+    rgba(11, 12, 16, 0.95)
+  );
+}
+
+.calendar-embed-container {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 15px;
+  padding: 2rem;
+  margin: 2rem 0;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+}
+
+.calendar-embed-container iframe {
+  border-radius: 10px;
+  background: white;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .countdown-hero {
+    min-height: 50vh;
+    padding: 2rem 1rem;
+  }
+  
+  .countdown-title {
+    font-size: 2rem;
+  }
+  
+  .countdown-timer {
+    gap: 1rem;
+  }
+  
+  .time-unit {
+    padding: 0.8rem 1rem;
+    min-width: 60px;
+  }
+  
+  .time-value {
+    font-size: 1.5rem;
+  }
+  
+  .time-label {
+    font-size: 0.7rem;
+  }
+  
+  .event-date {
+    font-size: 1rem;
+  }
+  
+  .event-location {
+    font-size: 0.9rem;
+  }
+  
+  .learn-more-btn {
+    padding: 0.8rem 2rem;
+    font-size: 1rem;
+  }
+  
+  .events-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .section-header h2 {
+    font-size: 2.5rem;
+  }
+  
+  .calendar-embed-container {
+    padding: 1rem;
+  }
+  
+  .calendar-embed-container iframe {
+    height: 500px;
+  }
+}
+
+/* Newsletter Page Styles */
+.newsletter-signup {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 4rem 2rem;
+  background: linear-gradient(
+    to bottom,
+    rgba(11, 12, 16, 0.95),
+    rgba(31, 31, 31, 0.98)
+  );
+}
+
+.signup-container {
+  text-align: center;
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f0f23 100%);
+  border-radius: 20px;
+  padding: 3rem;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(36, 152, 220, 0.2);
+}
+
+.signup-container h2 {
+  font-size: 3rem;
+  color: #2498DC;
+  margin-bottom: 1.5rem;
+  font-family: 'Nasalization', sans-serif;
+}
+
+.signup-container p {
+  font-size: 1.3rem;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 2rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.signup-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.signup-btn {
+  background: linear-gradient(135deg, #2498DC, #FF8300);
+  color: white;
+  padding: 1.2rem 3rem;
+  border: none;
+  border-radius: 50px;
+  font-size: 1.3rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 25px rgba(36, 152, 220, 0.3);
+  font-family: 'Nasalization', sans-serif;
+}
+
+.signup-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 35px rgba(36, 152, 220, 0.4);
+  background: linear-gradient(135deg, #1b7ec6, #e6750a);
+}
+
+.signup-note {
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.7);
+  font-style: italic;
+  max-width: 500px;
+}
+
+.newest-newsletter,
+.past-newsletters {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 4rem 2rem;
+  background: linear-gradient(
+    to bottom,
+    rgba(11, 12, 16, 0.8),
+    rgba(11, 12, 16, 0.95)
+  );
+}
+
+.newsletter-card {
+  background: linear-gradient(
+    135deg,
+    rgba(36, 152, 220, 0.05) 0%,
+    rgba(26, 26, 26, 0.9) 50%,
+    rgba(255, 131, 0, 0.05) 100%
+  );
+  border-radius: 15px;
+  padding: 2rem;
+  border: 1px solid;
+  border-image: linear-gradient(
+    135deg,
+    rgba(36, 152, 220, 0.3),
+    rgba(255, 131, 0, 0.3)
+  ) 1;
+  backdrop-filter: blur(5px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+.newsletter-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 40px rgba(36, 152, 220, 0.2);
+}
+
+.newsletter-card.featured {
+  background: linear-gradient(
+    135deg,
+    rgba(36, 152, 220, 0.1) 0%,
+    rgba(26, 26, 26, 0.95) 50%,
+    rgba(255, 131, 0, 0.1) 100%
+  );
+  border: 2px solid;
+  border-image: linear-gradient(135deg, #2498DC, #FF8300) 1;
+}
+
+.newsletter-preview {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 2rem;
+  align-items: center;
+}
+
+.newsletter-info h3 {
+  color: #2498DC;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  font-family: 'Nasalization', sans-serif;
+}
+
+.newsletter-date {
+  color: #FF8300;
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+}
+
+.newsletter-description {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+.newsletter-actions {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.download-btn,
+.view-btn {
+  padding: 0.8rem 1.5rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.download-btn {
+  background: #2498DC;
+  color: white;
+}
+
+.download-btn:hover {
+  background: #1b7ec6;
+  transform: translateY(-2px);
+}
+
+.view-btn {
+  background: transparent;
+  color: #FF8300;
+  border: 2px solid #FF8300;
+}
+
+.view-btn:hover {
+  background: #FF8300;
+  color: white;
+  transform: translateY(-2px);
+}
+
+.newsletter-thumbnail {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.thumbnail-placeholder {
+  width: 200px;
+  height: 250px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px dashed rgba(255, 255, 255, 0.3);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.thumbnail-placeholder span {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.thumbnail-placeholder p {
+  font-size: 1rem;
+  text-align: center;
+}
+
+.newsletters-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.newsletters-grid .newsletter-card {
+  padding: 1.5rem;
+}
+
+.newsletters-grid .newsletter-info h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.newsletters-grid .newsletter-description {
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.newsletters-grid .download-btn {
+  padding: 0.6rem 1.2rem;
+  font-size: 0.9rem;
+}
+
+/* Responsive Design for Newsletter */
+@media (max-width: 768px) {
+  .newsletter-preview {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .newsletter-actions {
+    justify-content: center;
+  }
+  
+  .signup-container {
+    padding: 2rem;
+  }
+  
+  .signup-container h2 {
+    font-size: 2.5rem;
+  }
+  
+  .newsletters-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* PDF Modal Styles */
+.pdf-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.9);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+.pdf-modal-content {
+  background: #1a1a2e;
+  border-radius: 15px;
+  width: 100%;
+  max-width: 70vw;
+  max-height: 95vh;
+  height: 95vh;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(36, 152, 220, 0.3);
+  box-sizing: border-box;
+}
+
+.pdf-modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 2rem;
+  border-bottom: 1px solid rgba(36, 152, 220, 0.2);
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f0f23 100%);
+  border-radius: 15px 15px 0 0;
+}
+
+.pdf-modal-header h3 {
+  color: #2498DC;
+  font-size: 1.5rem;
+  font-family: 'Nasalization', sans-serif;
+  margin: 0;
+}
+
+.pdf-close-btn {
+  background: none;
+  border: none;
+  color: #FF8300;
+  font-size: 2rem;
+  cursor: pointer;
+  padding: 0;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.pdf-close-btn:hover {
+  background: rgba(255, 131, 0, 0.1);
+  transform: scale(1.1);
+}
+
+.pdf-modal-body {
+  padding: 0;
+  flex: 1;
+  overflow: hidden;
+  height: calc(100% - 80px);
+  min-height: 0;
+}
+
+.pdf-modal-body iframe {
+  border: none;
+  border-radius: 0 0 15px 15px;
+  width: 100%;
+  height: 100%;
+  min-height: 800px;
+}
+
+@media (max-width: 768px) {
+  .pdf-modal {
+    padding: 0.5rem;
+  }
+  
+  .pdf-modal-content {
+    max-width: 85vw;
+    max-height: 98vh;
+    height: 98vh;
+  }
+  
+  .pdf-modal-header {
+    padding: 1rem;
+  }
+  
+  .pdf-modal-header h3 {
+    font-size: 1.2rem;
+  }
+  
+  .pdf-modal-body {
+    height: calc(100% - 70px);
+  }
+  
+  .pdf-modal-body iframe {
+    height: 100%;
+    min-height: 600px;
+  }
+}
+
+@media (max-width: 480px) {
+  .pdf-modal {
+    padding: 0.25rem;
+  }
+  
+  .pdf-modal-content {
+    max-width: 95vw;
+    max-height: 99vh;
+    height: 99vh;
+  }
+  
+  .pdf-modal-header h3 {
+    font-size: 1rem;
+  }
+  
+  .pdf-modal-body iframe {
+    min-height: 500px;
+  }
+}
